@@ -1,6 +1,6 @@
 package ait.inheritance.exercises;
 
-class Art extends Drawing{
+public class Art {
 	
 	public Art(){
 		System.out.println("ART constructor");
