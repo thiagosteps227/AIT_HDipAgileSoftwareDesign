@@ -2,7 +2,7 @@ package cardDeckApp;
 
 class Player {
 	private String theName;
-	public static Card [] theHand = new Card[5];
+	public Card [] theHand = new Card[5];
 
 	public Player(String theName, Card[] theHand) {
 		this.theName = theName;
@@ -22,12 +22,12 @@ class Player {
 		this.theName = theName;
 	}
 
-	public static Card [] getTheHand() {
+	public Card [] getTheHand() {
 		return theHand;
 	}
 
-	public static void setTheHand(Card [] theHand) {
-		Player.theHand = theHand;
+	public void setTheHand(Card [] theHand) {
+		this.theHand = theHand;
 	}
 
 	@Override
