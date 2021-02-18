@@ -7,7 +7,7 @@ public class cardDeckApp {
 	private static Scanner sc = new Scanner(System.in);
 	private static String [] suits = {"H","C", "D", "S"};
 	private static Card [] theDeck = new Card[52];
-	private static Player [] players = new Player[5];
+	private static Player [] players = new Player[4];
 
 	public static void main(String[] args) {
 		
@@ -22,6 +22,7 @@ public class cardDeckApp {
 	public static void loadCardArray() {
 		
 		int i=0;
+		//for each string suit in suits:
 		for(String suit: suits) {
 			for(int j=1;j<=13;j++) {
 					theDeck[i] = new Card(suit + j);
@@ -58,8 +59,8 @@ public class cardDeckApp {
 	
 	public static void dealCards() {
 		
-		int cardIndex =0;
-		for (int i=0; i<4;i++) {
+		int cardIndex = 0;
+		for (int i=0; i<players.length;i++) {
 			System.out.print("Enter the player name: ");
 			String playerName = sc.next();
 			Card [] hand = {theDeck[cardIndex], 
