@@ -41,10 +41,10 @@ public class CodeAssessment2P {
 		Computer hp = Computer.HP;
 		Computer dell = Computer.DELL;
               
-
         // Print each computer object
 		//INSERT CODE HERE	
 		reviewPC(hp);
+		reviewPC(dell);
 		//System.out.println(dell);
         
     }
@@ -101,7 +101,7 @@ public class CodeAssessment2P {
         sb.append("Team Project\n");
         sb.append("Agile Design and Testyng 2\n");
         
-        //Lecturers
+        //Lecturers 1 way
         for(int i=0; i<sb.length();i++) {
         	if(sb.charAt(i) == '\n' && sb.charAt(i-1) == 2) {
         		sb.insert(i, ": Thiago");
@@ -113,6 +113,12 @@ public class CodeAssessment2P {
         		sb.insert(i, ": Thiago");
         	}
         }
+        //System.out.println(sb);
+        //Lecturers 2 way
+        sb.insert(sb.indexOf("Object Oriented Programming 2\n") + "Object Oriented Programming 2".length(), ": Thiago" );
+        sb.insert(sb.indexOf("Web Technologies\n") + "Web Technologies".length(), ": Mary" );
+        sb.insert(sb.indexOf("Team Project\n") + "Team Project".length(), ": Martina" );
+        sb.insert(sb.indexOf("Agile Design and Testyng 2\n") + "Agile Design and Testyng 2".length(), ": Thiago" );
         System.out.println(sb);
         
         // Fix typo
